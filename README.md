@@ -1,4 +1,3 @@
-Here's a simplified version of your README:
 
 ```markdown
 # Portfolio Project
