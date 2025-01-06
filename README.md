@@ -1,5 +1,5 @@
 ```markdown
-# Portfolio Project - README
+The portfolio is hosted on GitHub Pages and can be accessed here: [View Portfolio](https://erlendtregde.github.io/PortfolioGithubPages/)
 
 ## Overview
 A simple portfolio project using Vue for the frontend and Flask for the backend. The backend serves the built Vue frontend as static files along with API endpoints.
