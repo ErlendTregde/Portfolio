@@ -1,8 +1,14 @@
+Here's a simplified version of your README:
+
 ```markdown
+# Portfolio Project
+
 The portfolio is hosted on GitHub Pages and can be accessed here: [View Portfolio](https://erlendtregde.github.io/PortfolioGithubPages/)
 
 ## Overview
-A simple portfolio project using Vue for the frontend and Flask for the backend. The backend serves the built Vue frontend as static files along with API endpoints.
+A simple portfolio project with:
+- **Frontend**: Vue.js
+- **Backend**: Flask (serves the Vue build as static files)
 
 ---
 
@@ -16,27 +22,16 @@ Portfolio/
 ├── frontend/
 │   └── PortfolioFrontend/
 │       ├── src/        # Vue source files
-│       ├── dist/       # Build output (copied to backend/dist)
+│       ├── dist/       # Build output
 │       ├── package.json # Frontend dependencies
 ```
 
 ---
 
-## Requirements
-### Backend
-- Python 3.x
-- Flask
-
-### Frontend
-- Node.js
-- npm
-
----
-
-## Getting Started
+## Setup Instructions
 
 ### Backend Setup
-1. Navigate to the backend folder:
+1. Navigate to the backend:
    ```bash
    cd backend
    ```
@@ -49,18 +44,17 @@ Portfolio/
    ```bash
    pip install flask
    ```
-4. Run the Flask app:
+4. Start the Flask app:
    ```bash
    python app.py
    ```
-5. Access:
-   - API: [http://127.0.0.1:5000/api/projects](http://127.0.0.1:5000/api/projects)
-   - Frontend: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+5. Access the app at:
+   - [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ---
 
-### Frontend Setup (Development Mode)
-1. Navigate to the frontend folder:
+### Frontend Setup
+1. Navigate to the frontend:
    ```bash
    cd frontend/PortfolioFrontend
    ```
@@ -72,23 +66,16 @@ Portfolio/
    ```bash
    npm run dev
    ```
-4. Access:
-   - [http://localhost:5173/](http://localhost:5173/)
-
----
-
-### Build the Frontend
-1. Navigate to the frontend folder:
-   ```bash
-   cd frontend/PortfolioFrontend
-   ```
-2. Build the frontend:
+4. Build the frontend for production:
    ```bash
    npm run build
    ```
-3. Copy the `dist` folder to the backend:
+5. Copy the `dist` folder to the backend:
    ```bash
    cp -r dist ../../backend/
    ```
-4. Access the app via Flask:
+6. Access the app via Flask at:
    - [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+```
+
+This version is concise but still includes all necessary details for setting up and running your project.
