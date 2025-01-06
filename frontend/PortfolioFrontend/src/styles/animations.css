@@ -1,0 +1,20 @@
+/* animations.css */
+
+/* Subtle Wave Background Animation */
+@keyframes ghibli-wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(180deg, #e6ded5, #d1c4b0, #f0ece2);
+    background-size: 200% 200%;
+    animation: ghibli-wave 12s infinite ease-in-out;
+}

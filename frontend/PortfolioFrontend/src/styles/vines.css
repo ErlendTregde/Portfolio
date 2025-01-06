@@ -1,0 +1,102 @@
+/* Global Styles for Vines */
+.vine {
+    position: absolute;
+    z-index: 0; /* Ensure it is behind the text */
+    pointer-events: none; /* Prevent interaction */
+    opacity: 0.9; /* Slight transparency */
+    z-index: 0;
+}
+
+/* Top Right Vine */
+.vine-top-right {
+    top: 5px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 18%; /* Percentage width for responsiveness */
+    transform: rotate(15deg); /* Slight rotation for natural flow */
+    z-index: -1;
+}
+
+/* Bottom Left Vine */
+.vine-bottom-left {
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
+    width: 18%; /* Increase percentage width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+    transform: none;
+}
+
+
+/* Left Side Vine */
+.vine-side-left {
+
+    top: 5%; /* Move higher up relative to the viewport */
+    left: 50px; /* Shift closer to the components */
+    height: 80%; /* Adjust size as needed */
+}
+
+/* Right Side Vine */
+.vine-side-right {
+
+    top: 5%; /* Move higher up relative to the viewport */
+    right: 50px; /* Shift closer to the components */
+    height: 80%; /* Adjust size as needed */
+}
+
+/* Bottom Centered Vine for Components */
+.vine-bottom-center {
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the component */
+    left: 50%; /* Center horizontally within the component */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 100%; /* Match the width of the component */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.08; /* Slight transparency */
+    pointer-events: none; /* Prevent interaction */
+    z-index: -1; /* Ensure it’s behind the text */
+}
+
+/* Bottom Vine for Decoration */
+.vine-bottom-decor {
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the vine */
+    width: 10%; /* Adjust the width as necessary */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Ensure it’s behind other elements */
+    opacity: 0.9; /* Slight transparency */
+    pointer-events: none; /* Prevent interaction */
+}
+
+
+/* Bottom Left Vine */
+.vine-bottom-left {
+    position: absolute;
+    bottom: 5px; /* Adjust as needed */
+    left: 30px; /* Move inward from the left edge */
+    width: 12%; /* Adjust for size consistency */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Ensure it’s behind text */
+    opacity: 0.9; /* Add slight transparency */
+    pointer-events: none; /* Disable interaction */
+    transform: none; /* Remove any unwanted rotation */
+}
+
+
+/* Bottom Right Vine */
+.vine-bottom-right {
+    position: absolute;
+    bottom: 5px; /* Adjust as needed */
+    right: 30px; /* Move inward from the right edge */
+    width: 12%; /* Adjust for size consistency */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 0; /* Ensure it’s behind text */
+    opacity: 0.9; /* Add slight transparency */
+    pointer-events: none; /* Disable interaction */
+    transform: none; /* Remove any unwanted rotation */
+}
+

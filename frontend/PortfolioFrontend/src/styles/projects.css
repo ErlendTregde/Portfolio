@@ -1,0 +1,35 @@
+.projects {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space out the text and image */
+    margin-bottom: 20px;
+    gap: 20px; /* Space between text and image */
+}
+
+.project-text {
+    flex: 1; /* Allow text to take up space */
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column; /* Stack header and paragraphs */
+    justify-content: flex-start; /* Ensure alignment starts from the top */
+}
+
+.project-image {
+    width: 400px; /* Adjust size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
+/* Remove alternation (optional) */
+.project-item:nth-child(even) {
+    flex-direction: row; /* Ensure all items have the same direction */
+}
