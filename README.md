@@ -26,6 +26,36 @@ Portfolio/
 
 ## Setup Instructions
 
+
+
+### Frontend Setup
+1. Navigate to the frontend:
+bash
+   cd frontend/PortfolioFrontend
+   
+2. Install dependencies:
+bash
+   npm install
+   
+3. Start the development server:
+bash
+   npm run dev
+   
+4. Build the frontend for production:
+bash
+   npm run build
+   
+5. Copy the `dist` folder to the backend:
+bash
+   cp -r dist ../../backend/
+   
+6. Access the app via Flask at:
+   - [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+
+This version is concise but still includes all necessary details for setting up and running your project.
+"
+
 ### Frontend Setup
 1. Navigate to the frontend directory:
    ```bash
