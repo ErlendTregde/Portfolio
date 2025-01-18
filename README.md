@@ -2,6 +2,10 @@
 ```markdown
 # Portfolio Project
 
+Click the link below to see my portfolio:
+
+[https://erlendtregde.github.io/PortfolioGithubPages/](https://erlendtregde.github.io/PortfolioGithubPages/)
+
 The portfolio is hosted on GitHub Pages and can be accessed here: [View Portfolio](https://erlendtregde.github.io/PortfolioGithubPages/)
 
 ## Overview
