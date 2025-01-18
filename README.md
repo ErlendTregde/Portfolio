@@ -67,23 +67,6 @@ Portfolio/
 
 ---
 
-## Additional Notes
-- The portfolio is built with Vue.js and deployed using GitHub Pages.
-- Make sure the `vite.config.js` file has the correct `base` path set for GitHub Pages:
-   ```javascript
-   export default {
-     base: '/PortfolioGithubPages/',
-   };
 
 Enjoy exploring the portfolio! 🎉
-```
 
----
-
-### Key Fixes:
-1. Removed references to a backend since it wasn't included in your original setup.
-2. Focused on Vue.js and GitHub Pages setup.
-3. Simplified project structure to reflect the actual folders used.
-4. Updated deployment instructions for GitHub Pages to avoid confusion.
-
-Let me know if you need further refinements! 😊
