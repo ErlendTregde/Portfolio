@@ -1,31 +1,24 @@
 
-```markdown
 # Portfolio Project
 
 Click the link below to see my portfolio:
 
 [https://erlendtregde.github.io/PortfolioGithubPages/](https://erlendtregde.github.io/PortfolioGithubPages/)
 
-The portfolio is hosted on GitHub Pages and can be accessed here: [View Portfolio](https://erlendtregde.github.io/PortfolioGithubPages/)
-
 ## Overview
 A simple portfolio project with:
 - **Frontend**: Vue.js
-- **Backend**: Flask (serves the Vue build as static files)
+- **Deployment**: GitHub Pages
 
 ---
 
 ## Project Structure
 ```plaintext
 Portfolio/
-├── backend/
-│   ├── app.py          # Flask application
-│   ├── dist/           # Built Vue frontend files
-│   ├── venv/           # Python virtual environment
 ├── frontend/
 │   └── PortfolioFrontend/
 │       ├── src/        # Vue source files
-│       ├── dist/       # Build output
+│       ├── dist/       # Built production files
 │       ├── package.json # Frontend dependencies
 ```
 
@@ -33,31 +26,8 @@ Portfolio/
 
 ## Setup Instructions
 
-### Backend Setup
-1. Navigate to the backend:
-   ```bash
-   cd backend
-   ```
-2. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install Flask:
-   ```bash
-   pip install flask
-   ```
-4. Start the Flask app:
-   ```bash
-   python app.py
-   ```
-5. Access the app at:
-   - [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
-
----
-
 ### Frontend Setup
-1. Navigate to the frontend:
+1. Navigate to the frontend directory:
    ```bash
    cd frontend/PortfolioFrontend
    ```
@@ -69,16 +39,51 @@ Portfolio/
    ```bash
    npm run dev
    ```
+   - The app will be available locally at: [http://127.0.0.1:5173/](http://127.0.0.1:5173/)
+
 4. Build the frontend for production:
    ```bash
    npm run build
    ```
-5. Copy the `dist` folder to the backend:
+   - This generates the `dist` folder with production-ready files.
+
+---
+
+### Deployment Instructions
+1. Copy the contents of the `dist` folder to your GitHub Pages repository:
    ```bash
-   cp -r dist ../../backend/
+   cp -r dist ../PortfolioGithubPages
    ```
-6. Access the app via Flask at:
-   - [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+2. Commit and push the changes to the repository:
+   ```bash
+   git add -A
+   git commit -m "Deploy portfolio to GitHub Pages"
+   git push origin main
+   ```
+
+3. Access the portfolio at:
+   [https://erlendtregde.github.io/PortfolioGithubPages/](https://erlendtregde.github.io/PortfolioGithubPages/)
+
+---
+
+## Additional Notes
+- The portfolio is built with Vue.js and deployed using GitHub Pages.
+- Make sure the `vite.config.js` file has the correct `base` path set for GitHub Pages:
+   ```javascript
+   export default {
+     base: '/PortfolioGithubPages/',
+   };
+
+Enjoy exploring the portfolio! 🎉
 ```
 
-This version is concise but still includes all necessary details for setting up and running your project.
+---
+
+### Key Fixes:
+1. Removed references to a backend since it wasn't included in your original setup.
+2. Focused on Vue.js and GitHub Pages setup.
+3. Simplified project structure to reflect the actual folders used.
+4. Updated deployment instructions for GitHub Pages to avoid confusion.
+
+Let me know if you need further refinements! 😊
