@@ -1,19 +1,31 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import About from './components/About.vue';
 import Education from './components/Education.vue';
 import Work from './components/Work.vue';
 import Projects from './components/Projects.vue';
 
-// Import scroll animations script
 import './scripts/scroll-animations.js';
+
+const isMobile = ref(false);
+
+const checkIfMobile = () => {
+  isMobile.value = window.innerWidth <= 768;
+};
+
+onMounted(() => {
+  checkIfMobile();
+  window.addEventListener('resize', checkIfMobile);
+});
 </script>
+
 
 <template>
   <div id="app">
-    <img src="./pictures/longvine.png" alt="Vine Left" class="vine vine-side-left" />
-    <img src="./pictures/longvine.png" alt="Vine Right" class="vine vine-side-right" />
-    <img src="./pictures/flower2.png" alt="Bottom Left Vine" class="vine vine-bottom-left" />
-    <img src="./pictures/flower2.png" alt="Bottom Right Vine" class="vine vine-bottom-right" />
+    <img v-if="!isMobile" src="./pictures/longvine.png" alt="Vine Left" class="vine vine-side-left" />
+    <img v-if="!isMobile" src="./pictures/longvine.png" alt="Vine Right" class="vine vine-side-right" />
+    <img v-if="!isMobile" src="./pictures/flower2.png" alt="Bottom Left Vine" class="vine vine-bottom-left" />
+    <img v-if="!isMobile" src="./pictures/flower2.png" alt="Bottom Right Vine" class="vine vine-bottom-right" />
 
     <main>
       <section id="about">
@@ -26,11 +38,16 @@ import './scripts/scroll-animations.js';
         <Work />
       </section>
       <section id="projects">
-        <Projects />
+        <Projects :isMobile="isMobile" />
       </section>
     </main>
   </div>
-</template>  
+</template>
+
+<style scoped>
+@import './styles/vines.css';
+</style>
+
 
 <style scoped>
 @import './styles/vines.css';

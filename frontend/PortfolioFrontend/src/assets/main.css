@@ -33,3 +33,30 @@ a,
     padding: 0 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .vine, 
+  .project-image {
+    display: none;
+  }
+
+  #app {
+    padding: 1rem;
+  }
+
+  .projects {
+    padding: 1rem;
+  }
+
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-text {
+    margin-bottom: 1rem;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+}
