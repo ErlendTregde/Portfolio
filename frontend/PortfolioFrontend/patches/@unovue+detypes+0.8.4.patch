@@ -1,0 +1,13 @@
+diff --git a/node_modules/@unovue/detypes/dist/chunk-7Q5W3NSK.mjs b/node_modules/@unovue/detypes/dist/chunk-7Q5W3NSK.mjs
+index 780b60d..14cad8b 100644
+--- a/node_modules/@unovue/detypes/dist/chunk-7Q5W3NSK.mjs
++++ b/node_modules/@unovue/detypes/dist/chunk-7Q5W3NSK.mjs
+@@ -289,7 +289,7 @@ async function removeMagicComments(code, fileName, prettierOptions) {
+ 
+ // src/transformFile.ts
+ import fs from "node:fs";
+-import { resolveConfig } from "prettier";
++const resolveConfig = () => {}; // Dummy function
+ var { readFile, writeFile } = fs.promises;
+ async function transformFile(inputFileName, outputFileName, options = {}) {
+   const code = await readFile(inputFileName, "utf-8");

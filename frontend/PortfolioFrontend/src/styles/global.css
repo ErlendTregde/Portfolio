@@ -1,0 +1,123 @@
+@import './animations.css';
+@import './components.css';
+@import './vines.css';
+@import './projects.css';
+
+
+
+/* global.css */
+/* Reset styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body spans full viewport height */
+    font-family: 'Georgia', serif; /* Studio Ghibli-inspired font */
+    background-color: #f7f2e8; /* Soft beige for background */
+    color: #3e3e3e; /* Gentle dark gray text */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* Apply box-sizing globally */
+*, *::before, *::after {
+    box-sizing: border-box; /* Ensure padding and borders are included in size */
+}
+
+/* App container styles */
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Add consistent top padding for the header */
+    padding-bottom: 40px; /* Add bottom padding for breathing room */
+    min-height: 100vh; /* Ensure app covers full viewport height */
+    width: 100%;
+    max-width: 1200px; /* Limit the container's width for readability */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Main Content Styling */
+main {
+    flex: 1; /* Allow the main content to grow and take up available space */
+    display: flex;
+    flex-direction: column; /* Stack components vertically */
+    align-items: center; /* Center components horizontally */
+    gap: 40px; /* Space between sections */
+    width: 100%; /* Ensure content spans the full width */
+    max-width: 1000px; /* Limit content width for readability */
+    padding: 20px; /* Add spacing around the content */
+    background: rgba(245, 240, 230, 0.95); /* Soft translucent background */
+    border-radius: 10px;
+}
+
+/* Section Styling */
+section {
+    width: 100%; /* Ensure sections take full width */
+    text-align: center; /* Center-align section content */
+    margin: 0 auto; /* Center section horizontally */
+    padding: 20px 0; /* Add vertical padding to separate sections */
+    border-radius: 15px; /* Optional: rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* Soft white background */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial offset for animation */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth animation */
+}
+
+/* When a section becomes visible */
+section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset to original position */
+}
+
+/* Header Styling */
+.header {
+    background: rgba(220, 210, 200, 0.8); /* Soft translucent beige */
+    color: #3e3e3e; /* Gentle gray text */
+    text-align: center;
+    padding: 20px 0; /* Add padding around header */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make header span the full width */
+
+    z-index: 10; /* Ensure the header stays above other elements */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem; /* Adjust header font size */
+    font-family: 'Georgia', serif; /* Studio Ghibli-inspired font */
+    color: #4a4a4a;
+}
+
+.header nav a {
+    color: #4a90e2; /* Gentle blue for links */
+    margin: 0 15px;
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem;
+}
+
+.header nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #2c6cad; /* Slightly darker blue */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5rem; /* Smaller font size for header on mobile */
+    }
+
+    .header nav a {
+        font-size: 1rem; /* Adjust link size */
+    }
+
+    main {
+        gap: 30px; /* Reduce gap between sections */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    section {
+        padding: 10px 0; /* Reduce section padding on smaller screens */
+    }
+}

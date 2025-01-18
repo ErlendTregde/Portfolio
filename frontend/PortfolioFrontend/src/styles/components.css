@@ -1,0 +1,49 @@
+/* components.css */
+/* Common Styles for All Sections */
+section {
+    text-align: center;
+    padding: 40px 20px; /* Add padding for consistent spacing */
+    background: rgba(245, 240, 230, 0.95); /* Studio Ghibli-inspired light background */
+    margin-top: 20px; /* Space from previous element */
+    width: 100%; /* Full width of container */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth entry animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Animation when visible */
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #4a4a4a; /* Gentle dark gray for headers */
+    font-family: 'Georgia', serif; /* Studio Ghibli-inspired font */
+    margin-bottom: 20px;
+}
+
+.item {
+    margin-top: 20px;
+}
+
+.item h3 {
+    font-size: 1.5rem;
+    color: #3e3e3e; /* Gentle gray for subheaders */
+}
+
+.item p {
+    font-size: 1.2rem;
+    color: #6e6e6e; /* Softer gray for body text */
+}
+
+a {
+    color: #4a90e2; /* Gentle blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2c6cad; /* Slightly darker blue on hover */
+}
