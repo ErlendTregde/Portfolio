@@ -12,7 +12,7 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
-  base: '/Portfolio/',
+  base: '/',
   resolve: {
     alias: {
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
